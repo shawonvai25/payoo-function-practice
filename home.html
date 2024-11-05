@@ -12,22 +12,67 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <main>
+    <main class="flex justify-center">
       <div class="mockup-phone">
         <div class="camera"></div>
         <div class="display">
-          <div class="artboard artboard-demo phone-1">
-            <!-- add money form start -->
-            <div class="mockup-phone">
-              <div class="camera"></div>
-              <div class="display">
-                <div class="artboard artboard-demo phone-1"></div>
+          <div class="artboard artboard-demo phone-3">
+            <!-- Account balance  -->
+            <div class="stats shadow">
+              <div class="stat">
+                <div class="stat-title">Total Page Views</div>
+                <div id="account-balance" class="stat-value">9400</div>
               </div>
+            </div>
+            <div class="divider"></div>
+            <!-- features -->
+            <div class="grid grid-cols-3 space-x-1 mx-1">
+              <button class="btn">Add Money</button>
+              <button class="btn">Cash Out</button>
+              <button class="btn">Transaction</button>
+            </div>
+            <div class="divider"></div>
+            <!-- add money form start -->
+            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Add Money</span>
+                  </label>
+                  <input
+                    id="input-add-money"
+                    type="text"
+                    placeholder="Enter amount"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Pin</span>
+                  </label>
+                  <input
+                    id="add-money-pin"
+                    type="password"
+                    placeholder="Enter your pin"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control mt-6">
+                  <button id="btn-add-money" class="btn btn-primary">
+                    Add Money
+                  </button>
+                </div>
+              </form>
             </div>
             <!-- add money form end -->
           </div>
         </div>
       </div>
     </main>
+
+    <script src="/js/utilities.js"></script>
+    <script src="js/addMoney.js"></script>
   </body>
 </html>

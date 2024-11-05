@@ -15,6 +15,12 @@ document.getElementById('btn-add-money')
         console.log(newBalance);
 
         document.getElementById('account-balance').innerText = newBalance ;
+
+        document.getElementById('input-add-money').value = '';
+        document.getElementById('input-money-pin').value = '';
+       }
+       else{
+        alert('chal hat paisa nehi milega tereko')
        }
 
 

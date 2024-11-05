@@ -27,7 +27,6 @@ document.getElementById('btn-cash-out').addEventListener('click',function(event)
     `
     document.getElementById('transaction-container').appendChild(div);
 
-
      }
      else{
        alert('no money for you  DGM')

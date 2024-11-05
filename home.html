@@ -27,14 +27,17 @@
             <div class="divider"></div>
             <!-- features -->
             <div class="grid grid-cols-3 space-x-1 mx-1">
-              <button class="btn">Add Money</button>
-              <button class="btn">Cash Out</button>
-              <button class="btn">Transaction</button>
+              <button id="show-add-money-form" class="btn">Add Money</button>
+              <button id="show-cash-out-form" class="btn">Cash Out</button>
+              <button id="show-transaction-history" class="btn">
+                Transaction
+              </button>
             </div>
             <div class="divider"></div>
             <!-- add money form start -->
             <div
-              class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+              id="add-money-form"
+              class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
             >
               <form class="card-body">
                 <div class="form-control">
@@ -70,7 +73,10 @@
             </div>
             <!-- add money form end -->
             <!-- cash out form start -->
-            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <div
+              id="cash-out-form"
+              class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+            >
               <form class="card-body">
                 <div class="form-control">
                   <label class="label">
@@ -106,7 +112,7 @@
             <!-- cash out form end -->
 
             <!-- transaction history start -->
-            <div id="transaction-section">
+            <div class="hidden" id="transaction-section">
               <h2 class="text-3xl font-bold">Transaction history</h2>
               <div id="transaction-container"></div>
             </div>
@@ -115,9 +121,9 @@
         </div>
       </div>
     </main>
-
-    <script src="/js/utilities.js"></script>
     <script src="js/addMoney.js"></script>
+    <script src="/js/utilities.js"></script>
     <script src="/js/cashOut.js"></script>
+    <script src="/js/feature.js"></script>
   </body>
 </html>
